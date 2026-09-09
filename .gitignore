@@ -28,5 +28,7 @@ Thumbs.db
 desktop.ini
 .DS_Store
 
-# Editor settings - uncomment to keep local
+# Editor settings 
 # .vscode/
+
+/presentation
