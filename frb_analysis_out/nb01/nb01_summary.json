@@ -1,0 +1,125 @@
+{
+  "observation": "CUT_P_110_inj_13_processed",
+  "instrument": {
+    "source_name": "SGR0501+4516",
+    "ra_deg": 75.27833333333335,
+    "dec_deg": 45.27611111111111,
+    "mjd_start": 60356.79948498255,
+    "nchans": 1024,
+    "nbits": 16,
+    "itemsize_bytes": 2,
+    "tsamp_s": 0.00013824,
+    "tsamp_us": 138.24,
+    "fch1_MHz": 415.85445601851853,
+    "foff_MHz": -0.014467592592592591,
+    "f_hi_MHz": 415.85445601851853,
+    "f_lo_MHz": 401.0541087962963,
+    "f_ctr_MHz": 408.4542824074074,
+    "bandwidth_MHz": 14.814814814814813,
+    "header_bytes": 327,
+    "nsamples": 1012964,
+    "duration_s": 140.03214336,
+    "band_descending": true
+  },
+  "search": {
+    "DM_LOW": 10.0,
+    "DM_MAX": 3000.0,
+    "DM_TOL": 1.01,
+    "BOXCAR_MAX": 1024,
+    "boxcar_max_ms": 141.55776
+  },
+  "counts": {
+    "heimdall_raw_cand": 106,
+    "candmaker_input": 102,
+    "dropped_pre_candmaker": 4,
+    "dropped_dm_range": [
+      10.6113,
+      11.0482
+    ],
+    "h5_written": 102,
+    "n_positive": 13,
+    "n_negative": 89,
+    "positive_fraction": 0.12745098039215685,
+    "injections_total": 13,
+    "heimdall_recovered": 13,
+    "fetch_accepted": 12
+  },
+  "fetch_vs_truth": {
+    "n_models": 11,
+    "ensemble": "arithmetic mean of a..k",
+    "TP": 12,
+    "FP": 0,
+    "FN": 1,
+    "TN": 89,
+    "recall": 0.9230769230769231,
+    "precision": 1.0,
+    "specificity": 1.0,
+    "g_mean": 0.9607689228305228
+  },
+  "labelling": {
+    "TOL_T_S": 0.5,
+    "TOL_DM_FR": 0.1,
+    "source": "stime x DM cross-match against inj_params.csv TOA"
+  },
+  "metadata_separability": [
+    {
+      "feature": "snr_csv",
+      "AUC": 1.0,
+      "KS": 1.0,
+      "p_MWU": 6.6287587982842e-09,
+      "pos_med": 31.5808,
+      "neg_med": 6.25826
+    },
+    {
+      "feature": "fetch_prob",
+      "AUC": 1.0,
+      "KS": 1.0,
+      "p_MWU": 6.6287587982842e-09,
+      "pos_med": 0.9999683909090908,
+      "neg_med": 0.0068014879011269
+    },
+    {
+      "feature": "members",
+      "AUC": 0.9991356957649093,
+      "KS": 0.9887640449438202,
+      "p_MWU": 5.575876876732829e-10,
+      "pos_med": 4499.0,
+      "neg_med": 1.0
+    },
+    {
+      "feature": "fetch_prob_std",
+      "AUC": 0.209161624891962,
+      "KS": 0.6041486603284356,
+      "p_MWU": 0.0007471486666764422,
+      "pos_med": 6.304847047384423e-05,
+      "neg_med": 0.015322080537258006
+    },
+    {
+      "feature": "boxcar_ms",
+      "AUC": 0.3802938634399309,
+      "KS": 0.4096802074330164,
+      "p_MWU": 0.15117532818865417,
+      "pos_med": 4.42368,
+      "neg_med": 70.77888
+    },
+    {
+      "feature": "dm_csv",
+      "AUC": 0.5246326707000865,
+      "KS": 0.17718236819360414,
+      "p_MWU": 0.7787311079183087,
+      "pos_med": 313.734,
+      "neg_med": 197.076
+    }
+  ],
+  "traps_confirmed": {
+    "h5_label_attr_all_zero": true,
+    "h5_decimation_attrs_stale": true,
+    "image_std_is_unity": true,
+    "fetch_label_is_prediction_not_truth": true,
+    "candmaker_flag_rfi": false
+  },
+  "open": [
+    "DM-trial range of data_dm_time not recorded anywhere -> notebook 02",
+    "single observation only; separability CIs are wide -> 20-obs pull"
+  ]
+}

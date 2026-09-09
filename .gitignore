@@ -1,0 +1,32 @@
+# Raw filterbank - 2 GB, over GitHub's hard 100 MB per-file limit.
+# See README for where to obtain it; nb03 is the only notebook that needs it.
+*.fil
+
+# Compressed copy of the candmaker output, which is committed uncompressed below
+*.tar.gz
+
+# nb03 raw candidate windows - 3.3 GB, individual files up to 163 MB.
+# Regenerate with nb03 section 7 once the .fil is in place.
+frb_analysis_out/nb03/windows/
+
+# Backups
+*.bak
+*.prestyle.bak
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor settings - uncomment to keep local
+# .vscode/

@@ -1,0 +1,45 @@
+{
+  "notebook": "03_filterbank_exploration",
+  "n_candidates": 102,
+  "n_injections": 13,
+  "dedisperser": {
+    "ref_convention": "top",
+    "f_lo_MHz": 401.0541087962963,
+    "ms_per_unit_dm": 1.8033500304750913,
+    "boxcar_optimum_matches_heimdall": true
+  },
+  "axis_calibration": {
+    "peak_offset_pct_median": 0.04885979818809835,
+    "peak_offset_pct_max": 0.24256644366331676,
+    "within_one_h5_column": 13,
+    "halfwidth_identity_rel_residual": 2.35e-15,
+    "step_convention": "/255 on both time and DM axes"
+  },
+  "decimation": {
+    "time": "max(1, boxcar_samples // 2)",
+    "freq": 4,
+    "log_multiset_match": true
+  },
+  "clipping": {
+    "headroom_sigma": 6.01,
+    "injections_clip": false
+  },
+  "rfi": {
+    "bursty_channels": 8,
+    "n_events": 4
+  },
+  "windows": {
+    "dir": "D:\\QML\\FRB Data\\frb_analysis_out\\nb03\\windows",
+    "n": 102,
+    "gb": 3.464,
+    "dtype": "uint16",
+    "nchan": 1024,
+    "padded_front": 3
+  },
+  "discarded": [
+    "bowtie-slope regression (nb02)",
+    "blk_max==65535 occupancy",
+    "full 989x1024 waterfall",
+    "dm0_raw (brightness in disguise)"
+  ]
+}

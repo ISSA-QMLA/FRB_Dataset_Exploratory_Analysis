@@ -1,0 +1,35 @@
+Data file                        : /jbod/GEM/TEST_HF/INJECTED/CUT_P_110_inj_13_processed.fil
+Header size (bytes)              : 327
+Data size (bytes)                : 2074550272
+Data type                        : filterbank (topocentric)
+Telescope                        : ???????
+Datataking Machine               : PSPM
+Source Name                      : SGR0501+4516
+Source RA (J2000)                : 05:01:06.8
+Source DEC (J2000)               : +45:16:34.0
+Start AZ (deg)                   : 1.000000
+Start ZA (deg)                   : 1.000000
+Frequency of channel 1 (MHz)     : 415.854456
+Channel bandwidth      (MHz)     : -0.014468
+Number of channels               : 1024
+Number of beams                  : 1
+Beam number                      : 1
+Time stamp of first sample (MJD) : 60356.799484982548
+Gregorian date (YYYY/MM/DD)      : 2024/02/16
+Sample time (us)                 : 138.24000
+Number of samples                : 1012964
+Observation length (minutes)     : 2.3
+Number of bits per sample        : 16
+Number of IFs                    : 1
+
+Heimdall parameters:
+DM_LOW = 10.0
+DM_MAX = 3000.0
+DM_TOL = 1.01
+BOXCAR_MAX = 1024
+ 
+Fetch parameters:
+Model = ALL
+Probability threshold: 0.5
+SNR threshold: 2.0
+RFI Tool: NONE

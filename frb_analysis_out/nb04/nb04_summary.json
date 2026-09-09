@@ -1,0 +1,115 @@
+{
+  "n_candidates": 102,
+  "n_features": 33,
+  "features_by_group": {
+    "A": 8,
+    "B_h5": 4,
+    "B_raw": 5,
+    "C": 7,
+    "D": 4,
+    "E": 5
+  },
+  "disguise_audit": {
+    "independent": 20,
+    "restatement": 6,
+    "suspect": 5,
+    "is-a-reference": 2
+  },
+  "mp_noise_edge": 2.4611223297537475,
+  "n_resolvable_directions": 4,
+  "variance_in_those": 0.6086406125614319,
+  "participation_ratio": 8.67172576104224,
+  "n_pairs_above_0.7": 21,
+  "n_pairs_all_to_all": 528,
+  "fourier_r_stable_features": 17,
+  "fourier_verdict": "r=1; higher degrees are CV noise at n_pos=13",
+  "transform_kinds": {
+    "log-fixable": 15,
+    "well-behaved": 8,
+    "stubborn": 7,
+    "flag": 3
+  },
+  "independent_features": [
+    "boxcar_ms",
+    "dm0_ratio",
+    "dmc_asym",
+    "dmc_fwhm_rows",
+    "dmc_kurt",
+    "dmc_peak_at_edge",
+    "dmc_peak_off_row",
+    "dmc_sharpness",
+    "dmc_skew",
+    "dmc_std",
+    "local_density",
+    "prof_mean",
+    "prof_n_5sig",
+    "prof_offpulse_kurt",
+    "prof_peak_off_abs",
+    "raw_boxcar_ms",
+    "raw_fwhm_ms",
+    "raw_peak_off_boxcar",
+    "raw_weq_ms",
+    "subband_coh"
+  ],
+  "caveat": "13 positives in one clean observation; separability rankings are degenerate. Transform constants and correlation structure are label-free and do transfer.",
+  "encoding": {
+    "qubit_budget": {
+      "resolvable_now": 4,
+      "at_planned_pull": 6,
+      "recommendation": "4-8 qubits; feature count is not qubit count"
+    },
+    "zz_kernel": {
+      "spread_collapse_fixed_bandwidth": 16.704754758236213,
+      "spread_collapse_tuned_bandwidth": 2.1412676242019892,
+      "kernel_mean_10q_fixed": 0.013189093995879574,
+      "kernel_mean_10q_tuned": 0.46158627304193767,
+      "recommended_bandwidth": {
+        "2": 0.8,
+        "3": 0.6,
+        "4": 0.6,
+        "5": 0.5,
+        "6": 0.5,
+        "7": 0.4,
+        "8": 0.4,
+        "9": 0.3,
+        "10": 0.3
+      },
+      "verdict": "bandwidth tuning is a viability condition, not a refinement"
+    },
+    "entangling_graph": {
+      "pairs_above_0.7": 21,
+      "pairs_all_to_all": 528
+    },
+    "reuploading_r": 1,
+    "cluster_representatives": [
+      "raw_boxcar_ms",
+      "dmc_skew",
+      "prof_mean",
+      "dmc_fwhm_rows",
+      "dmc_std",
+      "prof_n_5sig",
+      "prof_offpulse_kurt",
+      "dmc_peak_off_row",
+      "raw_peak_off_boxcar",
+      "dm0_ratio",
+      "prof_peak_off_abs",
+      "local_density",
+      "dmc_asym",
+      "dmc_peak_at_edge"
+    ],
+    "convention_note": "PennyLane IQPEmbedding uses x_i*x_j; Qiskit ZZFeatureMap uses (pi-x_i)(pi-x_j). Same family, different convention."
+  },
+  "angle_utilisation": {
+    "promoted_to_quantile": [
+      "prof_skew",
+      "prof_kurt",
+      "dmc_std",
+      "dmc_skew",
+      "prof_peak_snr",
+      "dmc_asym",
+      "members"
+    ],
+    "median_util_before": 0.3409480749444654,
+    "median_util_after": 0.5102040816326531
+  }
+}

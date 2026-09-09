@@ -1,0 +1,58 @@
+{
+  "n_candidates": 102,
+  "n_injections": 13,
+  "dm_axis": {
+    "formula": "linspace(0, 2*dm, 256)",
+    "source": "your/candidate.py Candidate.dmtime",
+    "dm_zero_in_image": true,
+    "peak_row_expected": 128,
+    "peak_row_injections": [
+      125,
+      128,
+      138
+    ]
+  },
+  "time_axis": {
+    "formula": "tcand +/- (dispersion_delay(dm) + width_samples*tsamp), 256 cols",
+    "source": "your/candidate.py Candidate.get_chunk",
+    "window_ms_range": [
+      98.15387034937311,
+      11003.778982170174
+    ],
+    "profile_peak_offset_frac_median": 0.003921568627450983
+  },
+  "collapse_convention": {
+    "integrated_profile": "data_freq_time.mean(axis=1)  # collapse frequency",
+    "dm_snr_curve": "data_dm_time.max(axis=1)  # collapse time, MAX not mean",
+    "mean_collapse_is_flat": true
+  },
+  "dm0_ratio": {
+    "auc": 0.696629213483146,
+    "injection_median": -0.008966656668289741,
+    "negative_median": 0.30704682836335834,
+    "computable": true
+  },
+  "std_collapse": {
+    "image_std_spread": 2.2185611681102557e-07,
+    "image_std_mean": 0.9999999991662921,
+    "image_std_constant_to_1e6": true,
+    "profile_std_range": [
+      0.05975483858161191,
+      0.9363868118353624
+    ],
+    "mean_identical_max_absdiff": 5.0409931340311687e-08,
+    "stats_rescued_by_collapsing": [
+      "std",
+      "skew",
+      "kurt"
+    ],
+    "stats_not_rescued": [
+      "mean"
+    ]
+  },
+  "stale_attrs_found": [
+    "nspectra",
+    "dm_opt",
+    "snr_opt"
+  ]
+}
