@@ -9,6 +9,14 @@
 # Regenerate with nb03 section 7 once the .fil is in place.
 frb_analysis_out/nb03/windows/
 
+# Cluster job and probe output. These hold internal IPs, mount tables, other
+# users' logins and node specs, so they stay on the cluster, never on GitHub.
+frb_pilot_*.txt
+probe_greed_*.txt
+recon*.txt
+slurm-*.out
+output.txt
+
 # Backups
 *.bak
 *.prestyle.bak

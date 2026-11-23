@@ -1,0 +1,18 @@
+# Packages for ~/frb_venv on the cluster (Python 3.10.12 on gluttony and greed).
+# These are the newest releases that still support 3.10, resolved and tested on
+# 2026-11-23: tests/test_frb_eda.py passed 13/13 under 3.10.12 with exactly these pins.
+# Install on the head node (home is shared, so greed sees the same venv):
+#   source ~/frb_venv/bin/activate
+#   pip install -r ~/frb_eda_repo/cluster/requirements-cluster.txt
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.3.3
+matplotlib==3.10.9
+scikit-learn==1.7.2
+h5py==3.16.0
+joblib==1.6.0
+threadpoolctl==3.8.0
+pennylane==0.42.3
+# to run the notebooks headless in a job: jupyter nbconvert --to notebook --execute
+nbconvert==7.17.2
+ipykernel==7.3.0
