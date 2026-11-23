@@ -9,11 +9,14 @@
     "boxcar_optimum_matches_heimdall": true
   },
   "axis_calibration": {
-    "peak_offset_pct_median": 0.04885979818809835,
-    "peak_offset_pct_max": 0.24256644366331676,
-    "within_one_h5_column": 13,
-    "halfwidth_identity_rel_residual": 2.35e-15,
-    "step_convention": "/255 on both time and DM axes"
+    "time_model": "decimate by max(1, boxcar//2) then crop the centre 256 columns",
+    "h5_profile_r_injections_min": 0.9229539585304218,
+    "resize_model_r_injections_max": 0.7088503218132785,
+    "decimate_crop_wins": "102/102",
+    "dm_axis_linspace_wins_injections": 13,
+    "peak_offset_pct_median": 0.04885979818809843,
+    "peak_offset_pct_max": 0.24256644366331714,
+    "within_one_h5_column": 13
   },
   "decimation": {
     "time": "max(1, boxcar_samples // 2)",
@@ -21,7 +24,7 @@
     "log_multiset_match": true
   },
   "clipping": {
-    "headroom_sigma": 6.01,
+    "headroom_sigma": 6.009707601081269,
     "injections_clip": false
   },
   "rfi": {
@@ -29,9 +32,9 @@
     "n_events": 4
   },
   "windows": {
-    "dir": "D:\\QML\\FRB Data\\frb_analysis_out\\nb03\\windows",
+    "cached": false,
     "n": 102,
-    "gb": 3.464,
+    "gb_if_cached": 3.464,
     "dtype": "uint16",
     "nchan": 1024,
     "padded_front": 3

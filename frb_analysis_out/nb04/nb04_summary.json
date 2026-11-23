@@ -10,18 +10,18 @@
     "E": 5
   },
   "disguise_audit": {
-    "independent": 20,
-    "restatement": 6,
-    "suspect": 5,
-    "is-a-reference": 2
+    "independent": 13,
+    "restatement": 10,
+    "suspect": 7,
+    "is-a-reference": 3
   },
   "mp_noise_edge": 2.4611223297537475,
   "n_resolvable_directions": 4,
-  "variance_in_those": 0.6086406125614319,
-  "participation_ratio": 8.67172576104224,
+  "variance_in_those": 0.6127348887236562,
+  "participation_ratio": 8.567856588903988,
   "n_pairs_above_0.7": 21,
   "n_pairs_all_to_all": 528,
-  "fourier_r_stable_features": 17,
+  "fourier_r_stable_features": 15,
   "fourier_verdict": "r=1; higher degrees are CV noise at n_pos=13",
   "transform_kinds": {
     "log-fixable": 15,
@@ -30,25 +30,18 @@
     "flag": 3
   },
   "independent_features": [
-    "boxcar_ms",
     "dm0_ratio",
     "dmc_asym",
-    "dmc_fwhm_rows",
     "dmc_kurt",
     "dmc_peak_at_edge",
     "dmc_peak_off_row",
-    "dmc_sharpness",
     "dmc_skew",
     "dmc_std",
     "local_density",
-    "prof_mean",
     "prof_n_5sig",
     "prof_offpulse_kurt",
     "prof_peak_off_abs",
-    "raw_boxcar_ms",
-    "raw_fwhm_ms",
     "raw_peak_off_boxcar",
-    "raw_weq_ms",
     "subband_coh"
   ],
   "caveat": "13 positives in one clean observation; separability rankings are degenerate. Transform constants and correlation structure are label-free and do transfer.",
@@ -56,13 +49,13 @@
     "qubit_budget": {
       "resolvable_now": 4,
       "at_planned_pull": 6,
-      "recommendation": "4-8 qubits; feature count is not qubit count"
+      "recommendation": "4-6 qubits; feature count is not qubit count"
     },
     "zz_kernel": {
-      "spread_collapse_fixed_bandwidth": 16.704754758236213,
-      "spread_collapse_tuned_bandwidth": 2.1412676242019892,
-      "kernel_mean_10q_fixed": 0.013189093995879574,
-      "kernel_mean_10q_tuned": 0.46158627304193767,
+      "spread_collapse_fixed_bandwidth": 7.86095244465182,
+      "spread_collapse_tuned_bandwidth": 1.8145815218381023,
+      "kernel_mean_10q_fixed": 0.01778209425718075,
+      "kernel_mean_10q_tuned": 0.4851803546219322,
       "recommended_bandwidth": {
         "2": 0.8,
         "3": 0.6,
@@ -82,17 +75,15 @@
     },
     "reuploading_r": 1,
     "cluster_representatives": [
-      "raw_boxcar_ms",
       "dmc_skew",
-      "prof_mean",
-      "dmc_fwhm_rows",
+      "subband_coh",
       "dmc_std",
       "prof_n_5sig",
       "prof_offpulse_kurt",
+      "prof_peak_off_abs",
       "dmc_peak_off_row",
       "raw_peak_off_boxcar",
       "dm0_ratio",
-      "prof_peak_off_abs",
       "local_density",
       "dmc_asym",
       "dmc_peak_at_edge"

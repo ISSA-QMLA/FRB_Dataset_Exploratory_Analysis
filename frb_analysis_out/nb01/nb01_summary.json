@@ -76,7 +76,7 @@
       "KS": 1.0,
       "p_MWU": 6.6287587982842e-09,
       "pos_med": 0.9999683909090908,
-      "neg_med": 0.0068014879011269
+      "neg_med": 0.006801487901126913
     },
     {
       "feature": "members",
@@ -97,7 +97,7 @@
     {
       "feature": "boxcar_ms",
       "AUC": 0.3802938634399309,
-      "KS": 0.4096802074330164,
+      "KS": 0.4096802074330165,
       "p_MWU": 0.15117532818865417,
       "pos_med": 4.42368,
       "neg_med": 70.77888
@@ -105,7 +105,7 @@
     {
       "feature": "dm_csv",
       "AUC": 0.5246326707000865,
-      "KS": 0.17718236819360414,
+      "KS": 0.17718236819360417,
       "p_MWU": 0.7787311079183087,
       "pos_med": 313.734,
       "neg_med": 197.076
@@ -118,6 +118,7 @@
     "fetch_label_is_prediction_not_truth": true,
     "candmaker_flag_rfi": false
   },
+  "chunk_geometry_vs_log": "102/102 exact",
   "open": [
     "DM-trial range of data_dm_time not recorded anywhere -> notebook 02",
     "single observation only; separability CIs are wide -> 20-obs pull"

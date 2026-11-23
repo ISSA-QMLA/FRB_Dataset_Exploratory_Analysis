@@ -1,34 +1,34 @@
-feature,group,verdict,cluster,kind,transform,snr_inj,snr_neg,dm_inj,dm_neg,role,reason,register_rank
-dm_csv,E,is-a-reference,10,well-behaved,none,,,,,reference,the axis every other feature was audited against,
-snr_csv,E,is-a-reference,18,stubborn,quantile,,,,,reference,the axis every other feature was audited against,
-raw_boxcar_ms,B_raw,independent,14,log-fixable,signed-log,-0.4694734251799997,-0.22804310001197983,0.19723439756082825,0.4264880104345868,keep,representative of cluster 14,1.0
-dmc_skew,A,independent,11,thin->quantile,quantile,0.45604395604395603,0.01527068437180797,0.24725274725274726,0.2858030550036738,keep,representative of cluster 11,2.0
-prof_mean,A,independent,6,stubborn,quantile,0.521978021978022,-0.2899216887980933,-0.25274725274725274,-0.29322562660133894,keep,representative of cluster 6,3.0
-dmc_fwhm_rows,C,independent,7,log-fixable,signed-log,-0.3623876423532877,0.2650858043450411,-0.5726278012758058,-0.136149245386038,keep,representative of cluster 7,4.0
-dmc_std,A,independent,12,thin->quantile,quantile,0.576923076923077,0.030983997276132113,-0.6428571428571429,0.3526232236294434,keep,representative of cluster 12,5.0
-prof_n_5sig,B_h5,independent,21,flag,none,0.0,-0.006006249751303726,0.0,-0.07027342117763323,keep,representative of cluster 21,6.0
-prof_offpulse_kurt,B_h5,independent,22,well-behaved,none,-0.06593406593406594,0.023884916581545797,0.2802197802197803,0.0842529973322124,keep,representative of cluster 22,7.0
-dmc_peak_off_row,C,independent,4,well-behaved,none,-0.19368585371163027,0.1434722741848202,-0.572253658693453,0.2937344118247018,keep,representative of cluster 4,8.0
-raw_peak_off_boxcar,B_raw,independent,23,log-fixable,signed-log,-0.07182430061427787,-0.09988347115032775,0.6408937593274027,-0.27310135396613006,keep,representative of cluster 23,9.0
-dm0_ratio,C,independent,9,well-behaved,none,0.15934065934065936,-0.004434816287137064,0.5054945054945055,0.3307399620357681,keep,representative of cluster 9,10.0
-prof_peak_off_abs,B_h5,independent,5,log-fixable,signed-log,0.11174753906691855,0.2226270108348405,0.4358154023609824,0.10200570430382808,keep,representative of cluster 5,11.0
-local_density,E,independent,2,flag,none,0.3086066999241838,-0.07598154044172144,-0.3086066999241838,0.2043812238064404,keep,representative of cluster 2,12.0
-dmc_asym,C,independent,3,thin->quantile,quantile,0.13186813186813187,0.025315162710848268,-0.18131868131868134,0.08633069029730425,keep,representative of cluster 3,13.0
-dmc_peak_at_edge,C,independent,1,flag,none,0.0,0.12243809596701724,0.0,0.1351046809072734,keep,representative of cluster 1,14.0
-dmc_bowtie_corr,C,suspect,13,well-behaved,none,0.35714285714285715,0.2362785154919987,-0.7967032967032966,0.07757949259302727,hold,"|rho| 0.80 vs dm_csv -- over the 0.70 null floor, under 0.85",
-dmc_mean,A,suspect,12,stubborn,quantile,0.3681318681318681,0.009329247531494724,-0.8021978021978022,0.09943011333982352,hold,"|rho| 0.80 vs dm_csv -- over the 0.70 null floor, under 0.85",
-members,E,suspect,19,thin->quantile,quantile,0.25274725274725274,0.39844908392174955,-0.7637362637362637,-0.10182567855063644,hold,"|rho| 0.76 vs dm_csv -- over the 0.70 null floor, under 0.85",
-prof_kurt,A,suspect,20,thin->quantile,quantile,0.8406593406593407,-0.09356486210418796,-0.0879120879120879,-0.03956434952516905,hold,"|rho| 0.84 vs snr_csv -- over the 0.70 null floor, under 0.85",
-spec_frac_bursty,D,suspect,17,stubborn,quantile,-0.7967032967032966,0.056554307116104874,0.5384615384615384,0.41154414174760606,hold,"|rho| 0.80 vs snr_csv -- over the 0.70 null floor, under 0.85",
-boxcar_ms,E,independent,6,well-behaved,none,-0.3732952601008456,0.24228236069938844,0.20336234318926666,0.3530397232880006,drop,"duplicate of prof_mean, cluster 6",
-dmc_kurt,A,independent,11,log-fixable,signed-log,0.45604395604395603,0.008256724548859382,0.23626373626373626,0.4130678118347415,drop,"duplicate of dmc_skew, cluster 11",
-dmc_sharpness,C,independent,7,well-behaved,none,0.38461538461538464,-0.23329928498467825,0.521978021978022,-0.007048038168425124,drop,"duplicate of dmc_fwhm_rows, cluster 7",
-prof_peak_snr,B_h5,restatement,20,thin->quantile,quantile,0.9065934065934067,-0.10160027238678924,-0.15384615384615383,-0.1577807191907344,drop,"hidden variant of snr_csv, |rho| 0.91 within class",
-prof_skew,A,restatement,20,thin->quantile,quantile,0.8736263736263737,-0.07124616956077631,-0.14835164835164835,-0.0627598857678725,drop,"hidden variant of snr_csv, |rho| 0.87 within class",
-prof_std,A,restatement,8,stubborn,quantile,0.9560439560439561,0.21910112359550565,-0.12637362637362637,0.11127047697784206,drop,"hidden variant of snr_csv, |rho| 0.96 within class",
-raw_fwhm_ms,B_raw,independent,14,log-fixable,signed-log,-0.429161341346969,-0.29415126243573747,0.17881722556123708,0.3422693237244815,drop,"duplicate of raw_boxcar_ms, cluster 14",
-raw_peak_snr,B_raw,restatement,15,stubborn,quantile,0.9615384615384615,-0.2442798774259449,-0.12087912087912088,0.19102907315917464,drop,"hidden variant of snr_csv, |rho| 0.96 within class",
-raw_weq_ms,B_raw,independent,14,log-fixable,signed-log,-0.4175824175824176,-0.22223357167177396,0.22527472527472525,0.31412288952825157,drop,"duplicate of raw_boxcar_ms, cluster 14",
-spec_frac_3sig,D,restatement,16,stubborn,quantile,0.9298495729184327,0.26996274679374527,-0.18156825980064076,-0.31182398330105704,drop,"hidden variant of snr_csv, |rho| 0.93 within class",
-spec_n_blocks,D,restatement,16,log-fixable,signed-log,0.9326006071578365,0.24357857717293593,-0.1458048146883933,-0.3403898479138834,drop,"hidden variant of snr_csv, |rho| 0.93 within class",
-subband_coh,D,independent,14,log-fixable,signed-log,-0.23626373626373626,0.3116956077630235,0.37912087912087916,0.01449614613626568,drop,"duplicate of raw_boxcar_ms, cluster 14",
+feature,group,verdict,cluster,kind,transform,snr_inj,snr_neg,dm_inj,dm_neg,bx_inj,bx_neg,role,reason,register_rank
+boxcar_ms,E,is-a-reference,15,well-behaved,none,,,,,,,reference,the axis every other feature was audited against,
+dm_csv,E,is-a-reference,22,well-behaved,none,,,,,,,reference,the axis every other feature was audited against,
+snr_csv,E,is-a-reference,13,stubborn,quantile,,,,,,,reference,the axis every other feature was audited against,
+dmc_skew,A,independent,18,thin->quantile,quantile,0.45604395604395603,0.01527068437180797,0.24725274725274726,0.2858030550036738,-0.2897216944066265,0.12465070238776087,keep,representative of cluster 18,1.0
+subband_coh,D,independent,3,log-fixable,signed-log,-0.23626373626373626,0.3116956077630235,0.37912087912087916,0.01449614613626568,0.06685885255537535,0.19174345277875993,keep,representative of cluster 3,2.0
+dmc_std,A,independent,19,thin->quantile,quantile,0.576923076923077,0.030983997276132113,-0.6428571428571429,0.3526232236294434,0.13093191958761005,0.019705250014756998,keep,representative of cluster 19,3.0
+prof_n_5sig,B_h5,independent,8,flag,none,0.0,-0.006006249751303726,0.0,-0.07027342117763323,0.0,-0.14845577415300018,keep,representative of cluster 8,4.0
+prof_offpulse_kurt,B_h5,independent,9,well-behaved,none,-0.06593406593406594,0.023884916581545797,0.2802197802197803,0.0842529973322124,-0.01671471313884384,-0.21857518121775438,keep,representative of cluster 9,5.0
+prof_peak_off_abs,B_h5,independent,10,log-fixable,signed-log,-0.4010989010989011,0.27238678924072185,0.2692307692307692,0.1961278350708735,-0.1281461340644694,0.41359538161368886,keep,representative of cluster 10,6.0
+dmc_peak_off_row,C,independent,11,well-behaved,none,-0.19368585371163027,0.1434722741848202,-0.572253658693453,0.2937344118247018,0.4701756291987864,0.09172441043912644,keep,representative of cluster 11,7.0
+raw_peak_off_boxcar,B_raw,independent,12,log-fixable,signed-log,-0.10178826685793495,-0.0791079341871083,0.6932606283297191,-0.2599077119138331,-0.09624189187118835,-0.22346047843493066,keep,representative of cluster 12,8.0
+dm0_ratio,C,independent,21,well-behaved,none,0.15934065934065936,-0.004434816287137064,0.5054945054945055,0.3307399620357681,-0.06685885255537535,-0.13977268176330143,keep,representative of cluster 21,9.0
+local_density,E,independent,2,flag,none,0.3086066999241838,-0.07598154044172144,-0.3086066999241838,0.2043812238064404,-0.039116899503181445,0.10911969311301611,keep,representative of cluster 2,10.0
+dmc_asym,C,independent,1,thin->quantile,quantile,0.13186813186813187,0.025315162710848268,-0.18131868131868134,0.08633069029730425,0.44572568370250226,-0.10244847583365158,keep,representative of cluster 1,11.0
+dmc_peak_at_edge,C,independent,23,flag,none,0.0,0.12243809596701724,0.0,0.1351046809072734,0.0,0.10879539128719924,keep,representative of cluster 23,12.0
+dmc_bowtie_corr,C,suspect,20,well-behaved,none,0.35714285714285715,0.2362785154919987,-0.7967032967032966,0.07757949259302727,-0.011143142092562557,0.47387500376242075,hold,"|rho| 0.80 vs dm_csv -- over the 0.70 null floor, under 0.85",
+dmc_fwhm_rows,C,suspect,16,log-fixable,signed-log,-0.3623876423532877,0.2650858043450411,-0.5726278012758058,-0.136149245386038,0.5582184944734411,0.7319708747848488,hold,"|rho| 0.73 vs boxcar_ms -- over the 0.70 null floor, under 0.85",
+dmc_mean,A,suspect,19,stubborn,quantile,0.3681318681318681,0.009329247531494724,-0.8021978021978022,0.09943011333982352,0.1838618445272822,-0.02324163063984969,hold,"|rho| 0.80 vs dm_csv -- over the 0.70 null floor, under 0.85",
+dmc_sharpness,C,suspect,16,well-behaved,none,0.38461538461538464,-0.23329928498467825,0.521978021978022,-0.007048038168425124,-0.5655144611975497,-0.7762937408130689,hold,"|rho| 0.78 vs boxcar_ms -- over the 0.70 null floor, under 0.85",
+members,E,suspect,14,thin->quantile,quantile,0.25274725274725274,0.39844908392174955,-0.7637362637362637,-0.10182567855063644,0.3565805469620018,0.24624363182853534,hold,"|rho| 0.76 vs dm_csv -- over the 0.70 null floor, under 0.85",
+prof_kurt,A,suspect,7,thin->quantile,quantile,0.8406593406593407,-0.09356486210418796,-0.0879120879120879,-0.03956434952516905,-0.47358353893390864,-0.3648739047484877,hold,"|rho| 0.84 vs snr_csv -- over the 0.70 null floor, under 0.85",
+spec_frac_bursty,D,suspect,6,stubborn,quantile,-0.7967032967032966,0.056554307116104874,0.5384615384615384,0.41154414174760606,0.3482231903925799,0.32293869753852783,hold,"|rho| 0.80 vs snr_csv -- over the 0.70 null floor, under 0.85",
+dmc_kurt,A,independent,18,log-fixable,signed-log,0.45604395604395603,0.008256724548859382,0.23626373626373626,0.4130678118347415,-0.3844384021934082,-0.00989291288791753,drop,"duplicate of dmc_skew, cluster 18",
+prof_mean,A,restatement,15,stubborn,quantile,0.521978021978022,-0.2899216887980933,-0.25274725274725274,-0.29322562660133894,-0.9137376515901297,-0.8652314753185645,drop,"hidden variant of boxcar_ms, |rho| 0.91 within class",
+prof_peak_snr,B_h5,restatement,7,thin->quantile,quantile,0.9065934065934067,-0.10160027238678924,-0.15384615384615383,-0.1577807191907344,-0.48751246654961183,-0.4135237587149528,drop,"hidden variant of snr_csv, |rho| 0.91 within class",
+prof_skew,A,restatement,7,thin->quantile,quantile,0.8736263736263737,-0.07124616956077631,-0.14835164835164835,-0.0627598857678725,-0.47358353893390864,-0.4662382121846888,drop,"hidden variant of snr_csv, |rho| 0.87 within class",
+prof_std,A,restatement,17,stubborn,quantile,0.9560439560439561,0.21910112359550565,-0.12637362637362637,0.11127047697784206,-0.3983673298091114,0.7228541054936302,drop,"hidden variant of snr_csv, |rho| 0.96 within class",
+raw_boxcar_ms,B_raw,restatement,3,log-fixable,signed-log,-0.4694734251799997,-0.22804310001197983,0.19723439756082825,0.4264880104345868,0.9478910846775047,0.15165355594115462,drop,"hidden variant of boxcar_ms, |rho| 0.95 within class",
+raw_fwhm_ms,B_raw,restatement,3,log-fixable,signed-log,-0.429161341346969,-0.29415126243573747,0.17881722556123708,0.3422693237244815,0.981946259091545,0.09809088163058181,drop,"hidden variant of boxcar_ms, |rho| 0.98 within class",
+raw_peak_snr,B_raw,restatement,4,stubborn,quantile,0.9615384615384615,-0.2442798774259449,-0.12087912087912088,0.19102907315917464,-0.44293989817936164,-0.269337910696933,drop,"hidden variant of snr_csv, |rho| 0.96 within class",
+raw_weq_ms,B_raw,restatement,3,log-fixable,signed-log,-0.4175824175824176,-0.22223357167177396,0.22527472527472525,0.31412288952825157,0.9861680751917863,0.10230435798211188,drop,"hidden variant of boxcar_ms, |rho| 0.99 within class",
+spec_frac_3sig,D,restatement,5,stubborn,quantile,0.9298495729184327,0.26996274679374527,-0.18156825980064076,-0.31182398330105704,-0.39194161762034674,-0.1110773475850267,drop,"hidden variant of snr_csv, |rho| 0.93 within class",
+spec_n_blocks,D,restatement,5,log-fixable,signed-log,0.9326006071578365,0.24357857717293593,-0.1458048146883933,-0.3403898479138834,-0.39194161762034674,-0.15027469453668255,drop,"hidden variant of snr_csv, |rho| 0.93 within class",

@@ -3,9 +3,9 @@
   "n_injections": 13,
   "dm_axis": {
     "formula": "linspace(0, 2*dm, 256)",
-    "source": "your/candidate.py Candidate.dmtime",
+    "source": "your/utils/gpu.py gpu_dedisp_and_dmt_crop (dm_list)",
     "dm_zero_in_image": true,
-    "peak_row_expected": 128,
+    "peak_row_expected": 127.5,
     "peak_row_injections": [
       125,
       128,
@@ -13,13 +13,14 @@
     ]
   },
   "time_axis": {
-    "formula": "tcand +/- (dispersion_delay(dm) + width_samples*tsamp), 256 cols",
-    "source": "your/candidate.py Candidate.get_chunk",
-    "window_ms_range": [
-      98.15387034937311,
-      11003.778982170174
+    "formula": "chunk from get_chunk (widened to width*128 samples), sum over max(1, width//2) samples per column, centre 256 columns",
+    "column_s": "max(1, boxcar_samples // 2) * tsamp",
+    "source": "your/candidate.py Candidate.get_chunk + your/utils/gpu.py gpu_dedisp_and_dmt_crop",
+    "h5_window_ms_range": [
+      35.38944,
+      18119.39328
     ],
-    "profile_peak_offset_frac_median": 0.003921568627450983
+    "profile_peak_offset_columns_median": 0.45298032407738215
   },
   "collapse_convention": {
     "integrated_profile": "data_freq_time.mean(axis=1)  # collapse frequency",

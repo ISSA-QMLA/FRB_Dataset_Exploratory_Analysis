@@ -1,0 +1,31 @@
+{
+  "python": "3.14.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "scikit-learn": "1.9.1",
+    "h5py": "3.16.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.8.0",
+    "pennylane": "0.45.1"
+  },
+  "config": {
+    "ROOT": "C:\\Users\\Hans\\OneDrive\\Documents\\QML\\FRB Data",
+    "CAND_DIR": "C:\\Users\\Hans\\OneDrive\\Documents\\QML\\FRB Data\\CUT_P_110_inj_13_processed_2025-1-30-13-51",
+    "FIL_PATH": "C:\\Users\\Hans\\OneDrive\\Documents\\QML\\FRB Data\\Data\\CUT_P_110_inj_13_processed.fil",
+    "INJ_CSV": "C:\\Users\\Hans\\OneDrive\\Documents\\QML\\FRB Data\\Data\\CUT_P_110_inj_params.csv",
+    "OUT_ROOT": "C:\\Users\\Hans\\OneDrive\\Documents\\QML\\FRB Data\\frb_analysis_out",
+    "N_JOBS": 12,
+    "CACHE_WINDOWS": false,
+    "SEED": 0
+  },
+  "sha256": {
+    "CUT_P_110_inj_13_processed.fil": "cd3a6ba5fef3bc6323a0c97c22b55ef3a9b5153c485d52fb31deee02525d28e1",
+    "CUT_P_110_inj_params.csv": "e585e1547c958ce13a60ff4a63e753087f13765e5436acbc762488b9d830c1aa",
+    "Results_MULTI.csv": "9b5af2ed098ab57556ca04d1f6f4f4d283e305456c0b706c95a6a6134d65965f",
+    "2024-02-16-18-12-59_all_candidates.csv": "f491f91188072274e19e3ac432113f9bbc210c56f19443c8f0044a5a07183720"
+  }
+}
