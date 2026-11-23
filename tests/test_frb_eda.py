@@ -193,6 +193,24 @@ def test_raw_pass_parallel_matches_serial_and_reference():
             assert np.allclose(old["spec_on"][i], res["spec_on"], atol=1e-3)
 
 
+def test_pipeline_reproduces_nb04_feature_matrix():
+    """The unattended corpus pipeline must give nb04's features and nb01's recovery table."""
+    need_fil()
+    from frb_eda import pipeline
+    obs = pipeline.Observation("CUT_P_110", config.CAND_DIR, config.FIL_PATH, config.INJ_CSV)
+    feats, inj, summ = pipeline.run_observation(obs)
+    ref = pd.read_csv(config.OUT_ROOT / "nb04" / "feature_matrix.csv")
+    assert list(ref.h5_name) == list(feats.h5_name)
+    assert (ref.is_injection.to_numpy() == feats.is_injection.to_numpy()).all()
+    for c in pipeline.FEATURES:     # 1e-6: spec_frac_bursty went through float32 and a csv
+        assert np.allclose(feats[c].to_numpy(float), ref[c].to_numpy(float), rtol=1e-6, atol=1e-9), c
+    mref = pd.read_csv(NB01 / "injection_recovery_match.csv")
+    for c in ("TOA", "recovered", "snr_heimdall", "fetch_prob", "fetch_label"):
+        assert np.allclose(inj[c].to_numpy(float), mref[c].to_numpy(float), equal_nan=True), c
+    assert (summ["n_injections_recovered"], summ["fetch_fn"], summ["n_bursty_channels"]) == (13, 1, 8)
+    assert summ["chunk_geometry_exact"] == summ["n_candidates"] == 102
+
+
 def main():
     tests = [(n, f) for n, f in sorted(globals().items()) if n.startswith("test_") and callable(f)]
     failed = 0
